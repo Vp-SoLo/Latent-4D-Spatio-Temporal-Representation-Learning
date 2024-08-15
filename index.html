@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="Learning Latent 4D Spatio-Temporal Representations for Coherent 4D Sequence Generation.">
+  <meta name="keywords" content="Nerfies, D-NeRF, NeRF">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Latent 4D Spatio-Temporal Representation Learning for Coherent 4D Sequence Generation</title>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+    gtag('config', 'G-PYVRSFMDRL');
+  </script>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="icon" href="./static/images/favicon.svg">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+</head>
+<body>
+
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">Latent 4D Spatio-Temporal Representation Learning for Coherent 4D Sequence Generation</h1>
+          <h2 class="subtitle is-3 publication-subtitle">Anonymous submission</h2>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <video id="teaser" muted autoplay loop playsinline height="100%">
+        <source src="./static/videos/teaser.mp4"
+                type="video/mp4">
+      </video>
+      <h2 class="subtitle has-text-centered">
+        We propose an image-text conditioned 4D generation method with 3D shape quality, color fidelity and sequence coherence.
+      </h2>
+    </div>
+  </div>
+</section>
+
+
+<section class="hero is-light is-small">
+  <div class="hero-body">
+    <div class="container">
+      <div id="results-carousel" class="carousel results-carousel">
+        <div class="item item-steve">
+          <video poster="" id="steve" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/5288.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-chair-tp">
+          <video poster="" id="chair-tp" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/5479.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-shiba">
+          <video poster="" id="shiba" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/6458.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-fullbody">
+          <video poster="" id="fullbody" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/6047.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-blueshirt">
+          <video poster="" id="blueshirt" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/6270.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-mask">
+          <video poster="" id="mask" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/6327.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            Directly learning to model 4D content, including shape, color and motion, is challenging. Existing methods depend on skeleton-based motion control and offer limited continuity in detail.
+		  </p>
+		  <p>
+		To address this, we propose a framework that generates coherent 4D sequences with animation of 3D shapes under given conditions (text-image guidance) with dynamic evolution of shape and color over the spatial and temporal dimensions. We first employ a coherent 3D shape and color modeling strategy to encode shape and color information of each detailed 3D geometry frame into a latent space. The proposed latent 4D sequence representation allows efficient diffusion model operation and spatio-temporal attention. Finally, temporally coherent and high-fidelity 4D sequences are generated conforming well to the input images and text prompts. Extensive experiments on the ShapeNet, 3DBiCar and DeformingThings4D datasets for several tasks demonstrate that our method effectively learns to generate high quality 3D shapes with consistent color and coherent mesh animations, improving over the current state-of-the-art.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--/ Abstract. -->
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+
+    <div class="columns is-centered">
+
+      <!-- Normal. -->
+      <div class="column">
+        <div class="content">
+          <h2 class="title is-3">Objects with normal</h2>
+          <video id="dollyzoom" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/object_normal.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+      </div>
+      <!--/ Normal. -->
+
+      <!-- Color. -->
+      <div class="column">
+        <h2 class="title is-3">Shape and Color</h2>
+        <div class="columns is-centered">
+          <div class="column content">
+            <video id="matting-video" autoplay controls muted loop playsinline height="100%">
+              <source src="./static/videos/object_color.mp4"
+                      type="video/mp4">
+            </video>
+          </div>
+
+        </div>
+      </div>
+    </div>
+    <!--/ Color. -->
+
+    <!-- Animation. -->
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">Obtain an arbitrary long 4D sequence</h2>
+
+        <!-- Interpolating. -->
+        <h3 class="title is-4">Interpolation results</h3>
+        <div class="content has-text-justified">
+          <p>
+            We first generate latent 4D representations of the same object performing different actions based on varying motion prompts, and then
+            useing interpolation to create intermediate transition frames, resulting in 4D sequences of arbitrary length.
+          </p>
+        </div>    
+        <div class="columns is-centered">
+
+          <!-- Normal. -->
+          <div class="column">
+            <div class="content">
+              <video id="dollyzoom" autoplay controls muted loop playsinline height="100%">
+                <source src="./static/videos/long_seq_1.mp4"
+                        type="video/mp4">
+              </video>
+            </div>
+          </div>
+          <!--/ Normal. -->
+    
+          <!-- Color. -->
+          <div class="column">
+            <div class="columns is-centered">
+              <div class="column content">
+                <video id="matting-video" autoplay controls muted loop playsinline height="100%">
+                  <source src="./static/videos/long_seq_2.mp4"
+                          type="video/mp4">
+                </video>
+              </div>
+    
+            </div>
+          </div>
+        </div>
+        <br/>
+        <!--/ Interpolating. -->
+
+        <!-- Re-rendering. -->
+        <h3 class="title is-4">Different views</h3>
+        <div class="content has-text-justified">
+          <p>
+            We can also re-render the 4D sequence from different viewpoints.
+          </p>
+        </div>
+        <div class="content has-text-centered">
+          <video id="replay-video" autoplay controls muted loop playsinline width="75%">
+            <source src="./static/videos/long_seq_views.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <!--/ Re-rendering. -->
+
+      </div>
+    </div>
+    <!--/ Animation. -->
+
+
+    <!-- Concurrent Work. -->
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">Related Links</h2>
+
+        <div class="content has-text-justified">
+          <p>
+            The shape representation is inspired by <a href="https://arxiv.org/abs/2104.09125">SDFusion</a> and <a href="https://arxiv.org/abs/2104.09125">DeepSDF</a>.
+          </p>
+          <p>
+            <a href="https://gaplab.cuhk.edu.cn/projects/RaBit/dataset.html">3DBiCar</a> is the first Large-scale dataset of 3D biped cartoon characters with annotated data. 
+          </p>
+          <p>
+            We also use <a href="https://github.com/rabbityl/DeformingThings4D">DeformingThings4D</a> to train unconditonal generation. 
+          </p>
+          <p>
+            All rendering results are exported by <a href="https://www.blender.org/">Blender</a>. Mesh sequences are imported by <a href="https://github.com/neverhood311/Stop-motion-OBJ"> Stop-motion-OBJ script</a>.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--/ Concurrent Work. -->
+
+  </div>
+</section>
+
+
+
+<!-- <section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+    <pre><code>@article{park2021nerfies,
+  author    = {Park, Keunhong and Sinha, Utkarsh and Barron, Jonathan T. and Bouaziz, Sofien and Goldman, Dan B and Seitz, Steven M. and Martin-Brualla, Ricardo},
+  title     = {Nerfies: Deformable Neural Radiance Fields},
+  journal   = {ICCV},
+  year      = {2021},
+}</code></pre>
+  </div>
+</section> -->
+
+
+<footer class="footer">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <p>
+            This website is licensed under a <a rel="license"
+                                                href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
+            Commons Attribution-ShareAlike 4.0 International License</a>.
+          </p>
+          <p>
+            This means you are free to borrow the <a
+              href="https://github.com/nerfies/nerfies.github.io">source code</a> of this website,
+            we just ask that you link back to this page in the footer.
+            Please remember to remove the analytics code included in the header of the website which
+            you do not want on your website.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
