@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="description"
-        content="Learning Latent 4D Spatio-Temporal Representations for Coherent 4D Sequence Generation.">
+        content="Learning Coherent Matrixized Representation in Latent Space for Volumetric 4D Generation">
   <meta name="keywords" content="Nerfies, D-NeRF, NeRF">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Latent 4D Spatio-Temporal Representation Learning for Coherent 4D Sequence Generation</title>
@@ -64,7 +64,7 @@
                 type="video/mp4">
       </video>
       <h2 class="subtitle has-text-centered">
-        We propose an image-text conditioned 4D generation method with 3D shape quality, color fidelity and sequence coherence.
+        We propose an image-text conditioned volumetric 4D generation method with 3D shape quality, color fidelity and sequence coherence.
       </h2>
     </div>
   </div>
@@ -125,10 +125,10 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            Directly learning to model 4D content, including shape, color and motion, is challenging. Existing methods depend on skeleton-based motion control and offer limited continuity in detail.
+            Directly learning to model 4D content, including shape, color, and motion, is challenging. Existing methods rely on pose priors for motion control, resulting in limited motion diversity and continuity in details.
 		  </p>
 		  <p>
-		To address this, we propose a framework that generates coherent 4D sequences with animation of 3D shapes under given conditions (text-image guidance) with dynamic evolution of shape and color over the spatial and temporal dimensions. We first employ a coherent 3D shape and color modeling strategy to encode shape and color information of each detailed 3D geometry frame into a latent space. The proposed latent 4D sequence representation allows efficient diffusion model operation and spatio-temporal attention. Finally, temporally coherent and high-fidelity 4D sequences are generated conforming well to the input images and text prompts. Extensive experiments on the ShapeNet, 3DBiCar and DeformingThings4D datasets for several tasks demonstrate that our method effectively learns to generate high quality 3D shapes with consistent color and coherent mesh animations, improving over the current state-of-the-art.
+		To address this, we propose a framework that generates volumetric 4D sequences, where 3D shapes are animated under given conditions (text-image guidance) with dynamic evolution in shape and color across spatial and temporal dimensions, allowing for free navigation and rendering from any direction. We first use a coherent 3D shape and color modeling to encode the shape and color of each detailed 3D geometry frame into a latent space. Then we propose a matrixized 4D sequence representation allowing efficient diffusion model operation. Finally, we introduce spatio-temporal diffusion for 4D volumetric generation under given images and text prompts. Extensive experiments on the ShapeNet, 3DBiCar, and DeformingThings4D datasets for several tasks demonstrate that our method effectively learns to generate high quality 3D shapes with consistent color and coherent mesh animations, improving over the current methods.
           </p>
         </div>
       </div>
